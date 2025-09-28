@@ -9,6 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git 'https://github.com/3bd0u/chatg_test.git'
+                 credentialsId: '308b517e-cbbd-4cee-b1ba-d893ee674d4e'
             }
         }
         
