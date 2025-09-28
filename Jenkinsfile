@@ -4,6 +4,9 @@ pipeline {
     environment {
         APP_NAME = 'MyPythonApp'
     }
+    tools {
+        python 'Python313'   // le nom que tu as configuré dans Jenkins
+    }
 
     stages {
         stage('Checkout') {
@@ -19,7 +22,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                bat '"C:\\Users\\usr1\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" -m pip install -r requirements.txt'
+                bat 'python -m pip install -r requirements.txt'
             }
         }
 
