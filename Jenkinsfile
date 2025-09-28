@@ -5,7 +5,7 @@ pipeline {
         APP_NAME = 'MyPythonApp'
     }
     tools {
-        python 'Python313'   // le nom que tu as configuré dans Jenkins
+        jenkins.plugins.shiningpanda.tools.PythonInstallation 'Python313'   // le nom que tu as configuré dans Jenkins
     }
 
     stages {
