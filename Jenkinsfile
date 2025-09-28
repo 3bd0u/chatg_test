@@ -4,9 +4,7 @@ pipeline {
     environment {
         APP_NAME = 'MyPythonApp'
     }
-    tools {
-        python 'Python313'   // le nom que tu as configuré dans Jenkins
-    }
+
 
     stages {
         stage('Checkout') {
