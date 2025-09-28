@@ -12,7 +12,11 @@ pipeline {
             }
         }
         
-
+ stage('Check files') {
+            steps {
+                sh 'ls -l'
+            }
+        }
         stage('Install Dependencies') {
             steps {
                 sh 'pip install -r requirements.txt'
