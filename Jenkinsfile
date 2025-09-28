@@ -26,7 +26,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'pytest || echo No tests found'
+                bat '"C:\\Users\\usr1\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" pytest || echo No tests found'
             }
         }
 
