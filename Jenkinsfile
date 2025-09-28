@@ -11,11 +11,7 @@ pipeline {
                 git 'https://github.com/3bd0u/chatg_test.git'
             }
         }
-         stage('Check files') {
-            steps {
-                sh 'ls -l'
-            }
-        }
+        
 
         stage('Install Dependencies') {
             steps {
