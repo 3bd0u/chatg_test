@@ -16,23 +16,23 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat '"C:\\Users\\usr1\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install --upgrade pip'
-                bat '"C:\\Users\\usr1\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt'
+            bat '"C:\\Users\\USER\\AppData\\Local\\Python\\bin\\python.exe" -m pip install --upgrade pip'
+            bat '"C:\\Users\\USER\\AppData\\Local\\Python\\bin\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
+
         stage('Run Tests') {
             steps {
-                bat '"C:\\Users\\usr1\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pytest -v || echo No tests found'
+                bat '"C:\\Users\\USER\\AppData\\Local\\Python\\bin\\python.exe" -m pytest -v || echo No tests found'
             }
         }
 
         stage('Package App') {
             steps {
-                // ✅ Si le dossier dist existe déjà, on n'affiche pas d'erreur
                 bat '''
                 if not exist dist mkdir dist
-                echo "Dossier dist prêt pour le packaging."
+                echo "✅ Dossier dist prêt pour le packaging."
                 '''
             }
         }
